@@ -3,8 +3,6 @@ import "./App.css";
 import { Router, Route, Redirect, Switch } from "react-router-dom";
 
 // Components
-// import Signin from './components/Signin'
-// import Signup from './components/Signup'
 import Dashboard from "./components/Dashboard/Dashboard"
 import Navbar from "./components/Navbar"
 import NotFound from "./components/NotFound"
@@ -78,7 +76,6 @@ class App extends Component {
 
                 <Route exact path="/" render={() => {
                   // return this.login()
-                  console.log(isAuthenticated());
                   if (!isAuthenticated()) {
                     return this.login()
                   } else {
