@@ -1,164 +1,126 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import { fetchSessions } from "./services/SessionService"
 import store from './config/store'
-import {
-  setTokenAction,
-  setLoginErrorAction,
-  setSignupErrorAction,
-  setSessionsAction,
-} from './config/actions'
-import { api, setJwt } from './api/init'
-import decodeJWT from 'jwt-decode'
+import { api } from './api/init'
 
 // Components
-import Signin from './components/Signin'
-import Signup from './components/Signup'
+// import Signin from './components/Signin'
+// import Signup from './components/Signup'
 import Dashboard from "./components/Dashboard/Dashboard"
 import Navbar from "./components/Navbar"
 import NotFound from "./components/NotFound"
-import Sessions from "./components/Sessions"
-import SessionCard from "./components/SessionCard"
-import User from "./components/User"
-import EditUser from "./components/EditUser"
+// import Sessions from "./components/Sessions"
+// import SessionCard from "./components/SessionCard"
+// import User from "./components/User"
+// import EditUser from "./components/EditUser"
+import history from './services/history';
+
+
 
 class App extends Component {
-  sessions = []
+  // sessions = [];
 
   componentDidMount() {
     // fetchBookmarks()
-    fetchSessions()
-    const token = localStorage.getItem('token')
-    if (token) {
-      store.dispatch(setTokenAction(token))
-      setJwt(token)
+    // fetchSessions()
+
+    // const { renewSession } = this.props.auth;
+
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      // renewSession();
+
+      // api.get('/sessions').then((res) => {
+      //   this.sessions = [...res.data]
+      //   console.log(this.sessions)
+      // }).catch((err) => {
+      //   console.error('Could not fetch', err)
+      // })
     }
 
-    api.get('/sessions').then((res) => {
-      this.sessions = [...res.data]
-      console.log(this.sessions)
-    }).catch((err) => {
-      console.error('Could not fetch', err)
-    })
   }
 
-  handleSignIn = async (event) => {
-    try {
-      event.preventDefault()
-      const form = event.target
-      const response = await api.post('/auth/login', {
-        email: form.elements.email.value,
-        password: form.elements.password.value
-      })
-      let token = response.data.token
-      localStorage.setItem('token', token)
-      setJwt(response.data.token)
-      store.dispatch(setTokenAction(token))
-      fetchSessions()
-    } catch (error) {
-      store.dispatch(setLoginErrorAction(error.message))
-    }
+
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
   }
 
-  handleSignOut = (event) => {
-    api.get('/auth/logout').then(() => {
-      localStorage.removeItem('token')
-      store.dispatch(setTokenAction(null))
-      store.dispatch(setSessionsAction([]))
-      console.log('ping')
-    })
+  login() {
+    this.props.auth.login();
   }
 
-  handleSignUp = async (event) => {
-
-
-    try {
-      event.preventDefault()
-      const form = event.target
-      let unitIndex = this.units[form.elements.unit.value]
-      console.log(unitIndex)
-
-      const response = await api.post('/auth/register', {
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-        name: {
-          firstname: form.elements.firstname.value,
-          lastname: form.elements.lastname.value,
-          guidename: form.elements.guidename.value
-        },
-        membershipNo: form.elements.membershipNo.value,
-        phone: form.elements.phone.value,
-        unit: {
-          ...unitIndex
-        }
-      })
-      let token = response.data.token
-      localStorage.setItem('token', token)
-      setJwt(response.data.token)
-      store.dispatch(setTokenAction(token))
-
-    } catch (error) {
-      store.dispatch(setSignupErrorAction(error.message))
-    }
-
+  logout() {
+    this.props.auth.logout();
   }
 
   render() {
-    const sessions = store.getState().sessions
+    const { isAuthenticated } = this.props.auth;
+
+    // const sessions = store.getState().sessions
     const token = store.getState().token
-    const tokenDetails = token && decodeJWT(token)
-    console.log('sessions array', sessions)
+    // const tokenDetails = token && decodeJWT(token)
+    const tokenDetails = true;
+    // console.log('sessions array', sessions)
     return (
       <div className="App">
         {
 
-          <Router>
+          <Router history={history}>
 
             <Fragment>
               <div>
                 <Navbar tokenDetails={tokenDetails} />
               </div>
-  
+
               <Switch>
                 <Route exact path='/login' render={() => {
-                  if (tokenDetails) {
-                    return (<Redirect to="/" />)
+                  if (!isAuthenticated) {
+                    return this.login()
                   } else {
-                    return (<Signin loginError={store.getState().loginError} handleSignIn={this.handleSignIn} />)
+                    return (<Redirect to="/" />)
                   }
                 }} />
 
                 <Route exact path='/signup' render={() => {
-                  if (tokenDetails) {
-                    return (<Redirect to="/" />)
+                  if (!isAuthenticated) {
+                    return this.login()
                   } else {
-                    return (<Signup signupError={store.getState().signupError} handleSignUp={this.handleSignUp} units={this.units && this.units} />)
+                    return (<Redirect to="/" />)
                   }
                 }} />
 
                 <Route exact path="/" render={() => {
-                  if (tokenDetails) {
-                    return <Redirect to="/user" />
+                  if (!isAuthenticated) {
+                    return this.login()
                   } else {
-                    return <Redirect to="/login" />
+                    return <Redirect to="/user" />
                   }
                 }} />
                 <Route exact path="/user" render={() => {
-                  if (tokenDetails) {
-                    return (<User handleSignOut={this.handleSignOut} />)
-                  } else {
+                  if (!isAuthenticated) {
                     return <Redirect to="/login" />
+                  } else {
+                     return (
+                        <button
+                          id="qsLoginBtn"
+                          bsStyle="primary"
+                          className="btn-margin"
+                          onClick={this.login.bind(this)}
+                        >
+                          Log In
+                        </button>
+                     )
                   }
                 }} />
-                <Route path="/user/edit" exact component={EditUser} />
-                <Route exact path="/" render={() => (
+                {/* <Route path="/user/edit" exact component={EditUser} /> */}
+                {/* <Route exact path="/" render={() => (
                   <Sessions session={sessions} />
-                )} />
-                <Route exact path="/sessions" render={() => {
+                )} /> */}
+                {/* <Route exact path="/sessions" render={() => {
                   return <Sessions sessions={sessions} />
-                }} />
-                <Route exact path="/sessions/:id" component={SessionCard} />
+                }} /> */}
+                {/* <Route exact path="/sessions/:id" component={SessionCard} /> */}
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route component={NotFound} />
               </Switch>
