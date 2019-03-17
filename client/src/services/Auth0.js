@@ -58,6 +58,7 @@ export default class Auth {
     this.accessToken = authResult.accessToken;
     this.idToken = authResult.idToken;
     this.expiresAt = expiresAt;
+    console.log (this);
 
     // navigate to the dashboard route
     History.replace('/dashboard');

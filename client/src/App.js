@@ -1,9 +1,6 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
-import { fetchSessions } from "./services/SessionService"
-import store from './config/store'
-import { api } from './api/init'
+import { Router, Route, Redirect, Switch } from "react-router-dom";
 
 // Components
 // import Signin from './components/Signin'
@@ -37,7 +34,8 @@ class App extends Component {
     const { renewSession } = auth;
 
     if (localStorage.getItem('isLoggedIn') === 'true') {
-      // renewSession();
+      renewSession();
+    }
 
       // api.get('/sessions').then((res) => {
       //   this.sessions = [...res.data]
@@ -45,7 +43,6 @@ class App extends Component {
       // }).catch((err) => {
       //   console.error('Could not fetch', err)
       // })
-    }
 
   }
 
@@ -77,43 +74,33 @@ class App extends Component {
               </div>
 
               <Switch>
-                <Route exact path='/login' render={() => {
-                  if (!isAuthenticated) {
-                    return this.login()
-                  } else {
-                    return (<Redirect to="/" />)
-                  }
-                }} />
 
-                <Route exact path='/signup' render={() => {
-                  if (!isAuthenticated) {
-                    return this.login()
-                  } else {
-                    return (<Redirect to="/" />)
-                  }
-                }} />
 
                 <Route exact path="/" render={() => {
-                  return this.login()
-                  // if (!isAuthenticated) {
-                  //   return this.login()
-                  // } else {
-                  //   return <Redirect to="/user" />
-                  // }
+                  // return this.login()
+                  console.log(isAuthenticated());
+                  if (!isAuthenticated()) {
+                    return this.login()
+                  } else {
+                    return <Redirect to="/user" />
+                  }
                 }} />
                 <Route exact path="/user" render={() => {
-                  if (!isAuthenticated) {
+                  if (!isAuthenticated()) {
                     return <Redirect to="/login" />
                   } else {
                     return (
-                      <button
-                        id="qsLoginBtn"
-                        bsStyle="primary"
-                        className="btn-margin"
-                        onClick={this.login.bind(this)}
-                      >
-                        Log In
+                      <div>
+                        <button
+                          id="qsLoginBtn"
+                          onClick={this.login.bind(this)}
+                        >
+                          Log In
                         </button>
+                        <button onClick={this.logout.bind(this)}>
+                          Log Out
+                      </button>
+                      </div>
                     )
                   }
                 }} />
