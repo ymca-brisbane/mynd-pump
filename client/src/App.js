@@ -19,7 +19,7 @@ import Dashboard from "./components/Dashboard/Dashboard"
 import Navbar from "./components/Navbar"
 import NotFound from "./components/NotFound"
 import Sessions from "./components/Sessions"
-import SessionCard from "./components/SessionCard"
+import SessionCard from "./components/Session"
 import User from "./components/User"
 import EditUser from "./components/EditUser"
 
