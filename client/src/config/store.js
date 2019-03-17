@@ -13,9 +13,9 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case 'set_sessions':
-      return { ...state, activities: action.sessions }
+      return { ...state, sessions: action.sessions }
     case 'set_session':
-      return { ...state, activity: action.session }
+      return { ...state, session: action.session }
     case 'set_loginError':
       return { ...state, loginError: action.loginError }
     case 'set_signupError':
