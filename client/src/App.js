@@ -15,10 +15,18 @@ import NotFound from "./components/NotFound"
 // import SessionCard from "./components/SessionCard"
 // import User from "./components/User"
 // import EditUser from "./components/EditUser"
-import history from './services/history';
+import History from './services/History';
+import Auth from './services/Auth0';
+import Callback from './services/Callback';
 
 
+const auth = new Auth();
 
+const handleAuthentication = ({ location }) => {
+  if (/access_token|id_token|error/.test(location.hash)) {
+    auth.handleAuthentication();
+  }
+}
 class App extends Component {
   // sessions = [];
 
@@ -26,7 +34,7 @@ class App extends Component {
     // fetchBookmarks()
     // fetchSessions()
 
-    // const { renewSession } = this.props.auth;
+    const { renewSession } = auth;
 
     if (localStorage.getItem('isLoggedIn') === 'true') {
       // renewSession();
@@ -47,26 +55,21 @@ class App extends Component {
   }
 
   login() {
-    this.props.auth.login();
+    auth.login();
   }
 
   logout() {
-    this.props.auth.logout();
+    auth.logout();
   }
 
   render() {
-    const { isAuthenticated } = this.props.auth;
-
-    // const sessions = store.getState().sessions
-    const token = store.getState().token
-    // const tokenDetails = token && decodeJWT(token)
+    const { isAuthenticated } = auth;
     const tokenDetails = true;
-    // console.log('sessions array', sessions)
     return (
       <div className="App">
         {
 
-          <Router history={history}>
+          <Router history={History}>
 
             <Fragment>
               <div>
@@ -91,26 +94,27 @@ class App extends Component {
                 }} />
 
                 <Route exact path="/" render={() => {
-                  if (!isAuthenticated) {
-                    return this.login()
-                  } else {
-                    return <Redirect to="/user" />
-                  }
+                  return this.login()
+                  // if (!isAuthenticated) {
+                  //   return this.login()
+                  // } else {
+                  //   return <Redirect to="/user" />
+                  // }
                 }} />
                 <Route exact path="/user" render={() => {
                   if (!isAuthenticated) {
                     return <Redirect to="/login" />
                   } else {
-                     return (
-                        <button
-                          id="qsLoginBtn"
-                          bsStyle="primary"
-                          className="btn-margin"
-                          onClick={this.login.bind(this)}
-                        >
-                          Log In
+                    return (
+                      <button
+                        id="qsLoginBtn"
+                        bsStyle="primary"
+                        className="btn-margin"
+                        onClick={this.login.bind(this)}
+                      >
+                        Log In
                         </button>
-                     )
+                    )
                   }
                 }} />
                 {/* <Route path="/user/edit" exact component={EditUser} /> */}
@@ -122,6 +126,10 @@ class App extends Component {
                 }} /> */}
                 {/* <Route exact path="/sessions/:id" component={SessionCard} /> */}
                 <Route exact path="/dashboard" component={Dashboard} />
+                <Route path="/callback" render={(props) => {
+                  handleAuthentication(props);
+                  return <Callback {...props} />
+                }} />
                 <Route component={NotFound} />
               </Switch>
             </Fragment>
