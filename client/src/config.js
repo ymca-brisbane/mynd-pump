@@ -1,0 +1,1 @@
+export default 'myndpump.apptime.com.au';

@@ -1,0 +1,845 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-03-19T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 2,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-03-21T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 3,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-03-26T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 4,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-03-28T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 5,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-04-02T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 6,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-04-04T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 7,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-04-09T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 8,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-04-11T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 9,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-04-16T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 10,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-04-18T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 11,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-04-23T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 12,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-04-25T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 13,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-04-30T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 14,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-05-02T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 15,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-05-07T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 16,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-05-09T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 17,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-05-14T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 18,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-05-16T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 19,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-05-21T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 20,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-05-23T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 21,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-05-28T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 22,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 1,
+      "centreId": 1,
+      "instructorId": 1,
+      "date": "2019-05-30T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Boxing",
+        "description": "Boxing-based Fitness Training"
+      },
+      "instructor": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "One",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 23,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 2,
+      "centreId": 1,
+      "instructorId": 2,
+      "date": "2019-06-04T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "HIIT",
+        "description": "High Intensity Interval Training"
+      },
+      "instructor": {
+        "id": 2,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Two",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    },
+    {
+      "id": 24,
+      "createdAt": "2019-03-17T03:54:34.417Z",
+      "updatedAt": "2019-03-17T03:54:34.417Z",
+      "workoutId": 3,
+      "centreId": 1,
+      "instructorId": 3,
+      "date": "2019-06-06T06:00:00.000Z",
+      "centre": {
+        "id": 1,
+        "createdAt": "2019-03-17T03:54:34.264Z",
+        "updatedAt": "2019-03-17T03:54:34.264Z",
+        "name": "Bowen Hills",
+        "address": "95 Abbotsford Road"
+      },
+      "workout": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.315Z",
+        "updatedAt": "2019-03-17T03:54:34.315Z",
+        "name": "Circuits",
+        "description": "Circuits Training"
+      },
+      "instructor": {
+        "id": 3,
+        "createdAt": "2019-03-17T03:54:34.364Z",
+        "updatedAt": "2019-03-17T03:54:34.364Z",
+        "firstName": "Instructor",
+        "lastName": "Three",
+        "email": null,
+        "password": null,
+        "mobile": null,
+        "dob": null,
+        "role": "instructor"
+      }
+    }
+  ],
+  "total": 24
+}

@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
-import { fetchSessions } from "./services/SessionService"
+// import { fetchSessions } from "./services/SessionService"
+import { fetchSessions } from './api/init';
 import store from './config/store'
-import { api } from './api/init'
 
 // Components
 // import Signin from './components/Signin'
@@ -11,8 +11,8 @@ import { api } from './api/init'
 import Dashboard from "./components/Dashboard/Dashboard"
 import Navbar from "./components/Navbar"
 import NotFound from "./components/NotFound"
-// import Sessions from "./components/Sessions"
-// import SessionCard from "./components/SessionCard"
+import Sessions from "./components/Sessions"
+import Session from "./components/Session"
 // import User from "./components/User"
 // import EditUser from "./components/EditUser"
 import history from './services/history';
@@ -20,23 +20,23 @@ import history from './services/history';
 
 
 class App extends Component {
-  // sessions = [];
+  sessions = [];
 
   componentDidMount() {
-    // fetchBookmarks()
-    // fetchSessions()
+    
 
     // const { renewSession } = this.props.auth;
 
     if (localStorage.getItem('isLoggedIn') === 'true') {
       // renewSession();
 
-      // api.get('/sessions').then((res) => {
-      //   this.sessions = [...res.data]
-      //   console.log(this.sessions)
-      // }).catch((err) => {
-      //   console.error('Could not fetch', err)
-      // })
+      fetchSessions().then((res) => {
+      console.log(res)
+
+        this.sessions = [...res.data]
+      }).catch((err) => {
+        console.error('Could not fetch', err)
+      })
     }
 
   }
@@ -57,11 +57,8 @@ class App extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
 
-    // const sessions = store.getState().sessions
-    const token = store.getState().token
-    // const tokenDetails = token && decodeJWT(token)
-    const tokenDetails = true;
-    // console.log('sessions array', sessions)
+    const sessions = store.getState().sessions
+    console.log('sessions array', sessions)
     return (
       <div className="App">
         {
@@ -70,7 +67,7 @@ class App extends Component {
 
             <Fragment>
               <div>
-                <Navbar tokenDetails={tokenDetails} />
+                <Navbar />
               </div>
 
               <Switch>
@@ -114,13 +111,13 @@ class App extends Component {
                   }
                 }} />
                 {/* <Route path="/user/edit" exact component={EditUser} /> */}
-                {/* <Route exact path="/" render={() => (
+                <Route exact path="/" render={() => (
                   <Sessions session={sessions} />
-                )} /> */}
-                {/* <Route exact path="/sessions" render={() => {
+                )} />
+                <Route exact path="/sessions" render={() => {
                   return <Sessions sessions={sessions} />
-                }} /> */}
-                {/* <Route exact path="/sessions/:id" component={SessionCard} /> */}
+                }} />
+                <Route exact path="/sessions/:id" component={Session} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route component={NotFound} />
               </Switch>
